@@ -40,6 +40,10 @@ body{
   width:70%;
   height: 70%;
 }
+.img-text-container{
+  flex-direction: column;
+  font-weight: bold;
+}
 .intro-parent{
   padding-top: 2em;
   display: flex;
@@ -65,7 +69,7 @@ body{
 .skills-child p{
   padding-top: 0.3em;
 }
-.skills-child img{
+.icon-img-child img{
   width:50px;
   height: 50px;
 }
@@ -90,9 +94,21 @@ body{
 }
 .contact-head h2{
   padding-top:0.9em;
+  font-size: 2em;
+}
+.skills-child h2{
+  font-size: 1.5em;
 }
 .contact-child{
   padding:1em;
+  transition-duration: 0.5s;
+}
+.contact-child a :hover{
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
+.contact-child a{
+    transition-duration: 0.3s;
 }
 .contact-child img{
   width:50px;
@@ -119,6 +135,9 @@ body{
   width: 50%;
   padding: 0.8em;
 }
+.btn{
+  text-align: center;
+}
 .intro-child p{
   margin-top: 2.5em;
 }
@@ -136,6 +155,33 @@ body{
   padding-top: 25em;
   font-family: "Lulo", sans-serif;
   animation: loadFade 3s;
+}
+.foot-container{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  align-content:flex-start;
+  justify-content: flex-start;
+  padding-top: 2em;
+}
+.foot-child{
+  padding-right: 2em;
+}
+.foot-container p{
+  padding:0.8em;
+  color:#5B5B5B;
+  transition-duration: 0.3s;
+}
+.foot-container a{
+  color:#5B5B5B;
+  transition-duration: 0.3s;
+}
+.foot-container a:hover{
+  color: #FF4546;
+  transition-duration: 0.3s;
+}
+.foot-child-right{
+  margin-left: auto;
 }
 @keyframes loadFade {
   from{
@@ -190,8 +236,6 @@ section{
   margin:0;
 
 }
-
-
 .work-parent{
   padding-top: 2em;
   display: flex;
@@ -233,7 +277,7 @@ section{
   visibility: hidden;
   color: black;
   opacity: 0;
-  font-size: 22px;
+  font-size: 1.4em;
   font-weight: bold;
   transition-duration: 0.3s;
   max-height: 35em;
@@ -321,7 +365,7 @@ section{
   visibility: hidden;
   color: black;
   opacity: 1;
-  font-size: 22px;
+  font-size: 1.4em;
   font-weight: bold;
   transition-duration: 0.3s;
   max-height: 35em;
@@ -514,7 +558,6 @@ section{
 }
 .center{
   font-family: "Lulo";
-  font-size: 12px;
   width: 100%;
   text-align: center;
   background-color: #F5F5F5;
@@ -551,45 +594,11 @@ section{
   from {opacity: .4}
   to {opacity: 1}
 }
-.ipad{
-  padding-top: 2em;
-  min-height: 216.97px;
-}
 .img-container{
   text-align: center;
   padding-top: 1em;
 }
-.support-parent{
-  background-color: #f5f5f5;
-  padding-left: 0.9em;
-  position: relative;
-  padding-top: 0.9em;
-  display: flex;
-  margin-bottom: 1rem;
-  flex-wrap:wrap;
-  flex-direction: row;
-  width: 100%;
-  overflow: auto;
-  justify-content:flex-start;
-}
-.support-child{
-  display: block;
-  margin:8px;
-  width: 200px;
-  color: #6C6E70;
-  text-decoration:none;
-}
-.support-child h5{
-  margin:0.2em;
-  margin-top: 1em;
-  margin-left: 0;
-  font-size: 10px;
-  color: #6C6E70;
-  text-decoration: none;
-}
-.support-child a {
-  text-decoration: none;
-}
+
 #home-nav img{
   width:2.5%;
   height:2.5%;
@@ -609,6 +618,14 @@ section{
 .proj-child{
   margin-top: 2em;
   text-align: left;
+}
+.wire-child{
+  margin-top: 2em;
+  text-align: left;
+}
+.wire-child img{
+  width: 90%;
+  height:90%;
 }
 .proj-child h1{
   text-align: left;
@@ -649,9 +666,42 @@ section{
     display: inline-block;
     text-decoration: none;
 }
+#abt h1{
+  font-family: "Lulo", sans-serif;
+  color: #2C467D;
+  text-align: left;
+  font-size: 2.5em;
+}
+#works h1{
+  padding-top: 0.5em;
+  font-family: "Lulo", sans-serif;
+  color: #2C467D;
+  text-align: left;
+  font-size: 2.5em;
+}
+#skill h1{
+  padding-top: 1.5em;
+  font-family: "Lulo", sans-serif;
+  color: #2C467D;
+  text-align: left;
+  font-size: 2.5em;
+}
+#cont h1{
+  padding-top: 1.5em;
+  font-family: "Lulo", sans-serif;
+  color: #2C467D;
+  text-align: left;
+  font-size: 2.5em;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  html,body{
+    overflow-x: hidden!important;
+  }
+  body{
+    position: relative;
+  }
   .container{
     height: 300px;
     padding-top: 20em;
@@ -663,23 +713,56 @@ section{
     padding:0.4rem;
   }
   #home-nav a{
-    font-size:8px;
+    font-size:1em;
   }
   #headline h1{
-    font-size: 20px;
+    font-size: 1.5em;
     padding-top:5em;
   }
+  #abt h1{
+    font-family: "Lulo", sans-serif;
+    color: #2C467D;
+    text-align: left;
+    font-size: 1.5em;
+  }
+  #works h1{
+    padding-top: 0.5em;
+    font-family: "Lulo", sans-serif;
+    color: #2C467D;
+    text-align: left;
+    font-size: 1.5em;
+  }
+  #skill h1{
+    padding-top: 1.5em;
+    font-family: "Lulo", sans-serif;
+    color: #2C467D;
+    text-align: left;
+    font-size: 1.5em;
+  }
+  #cont h1{
+    padding-top: 1.5em;
+    font-family: "Lulo", sans-serif;
+    color: #2C467D;
+    text-align: left;
+    font-size: 1.5em;
+  }
   #intro h1{
-    font-size:24px;
+    font-size:1.3em;
   }
   .body-container{
-    padding: 0;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+  }
+  .foot-container{
+    width:100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .foot-child-right{
+    margin:0;
   }
   .intro-child-bg{
     height:300px;
     width:80%;
+    padding: 0;
   }
   .intro-parent{
     flex-direction: column;
@@ -704,7 +787,7 @@ section{
     height:150px;
   }
   .work-child-2 h2{
-    font-size: 25px;
+    font-size: 1.3em;
     padding-top:50px;
   }
   .work-child-b{
@@ -718,14 +801,14 @@ section{
     height:150px;
   }
   .work-child-2-b h2{
-    font-size: 25px;
+    font-size: 1.3em;
     padding-top:50px;
   }
   .intro-child{
     width:80%;
   }
   .intro-child p{
-    font-size:20px;
+    font-size:3.5em;
   }
   .icon-text{
     align-items: center;
@@ -733,28 +816,37 @@ section{
     align-content: center;
   }
   .work-desc{
-    font-size: 15px;
+    font-size: 0.8em;
   }
   .work-desc p{
     padding-top: 5em;
   }
   .work-desc-b{
-    font-size: 15px;
+    font-size: 0.8em;
+  }
+  .skills-child{
+    padding-top: 3.8em;
+  }
+  .skills-child h2{
+    font-size:3.5em;
+  }
+  .skills-child p{
+    font-size:2.5em;
   }
   .work-desc-b p{
     padding-top: 3em;
   }
   .contact-head h2{
-    font-size: 22px;
-  }
-  .contact-head p{
-    font-size: 18px;
+    font-size: 1.3em;
   }
   .icon-text{
     padding-top: 1.5em;
   }
   .proj-child p{
-    font-size: 20px;
+    font-size: 1.5em;
+  }
+  .img-text-container p{
+    font-size:1em;
   }
   .images-container-parent{
     flex-direction: column;

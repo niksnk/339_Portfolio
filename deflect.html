@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
     <title>P3 PORTFOLIO</title>
   </head>
   <body>
@@ -36,13 +36,24 @@
             <h1>Ideas & sketches</h1>
             <div class="images-container-parent">
               <div class="images-container-child">
-                  <img src="images/sdfig1.webp" alt="sd figure 1"/>
+                <div class="img-text-container">
+                    <img src="images/sdfig1.webp" alt="sd figure 1"/>
+                    <p>Figure 1. List of things needed in the game</p>
+                </div>
+              </div>
+            </div>
+            <div class="images-container-parent">
+              <div class="images-container-child">
+                <div class="img-text-container">
+                    <img src="images/sdfig2.webp" alt="sd figure 2"/>
+                    <p>Figure 2. List of brainstormed game ideas</p>
+                </div>
               </div>
               <div class="images-container-child">
-                  <img src="images/sdfig2.webp" alt="sd figure 2"/>
-              </div>
-              <div class="images-container-child">
-                  <img src="images/sdfig3.webp" alt="sd figure 3"/>
+                <div class="img-text-container">
+                    <img src="images/sdfig3.webp" alt="sd figure 3"/>
+                    <p>Figure 3. Rough sketch of platforms and main character</p>
+                </div>
               </div>
             </div>
             <p> When we first saw the game theme for the jam, we could not think about a particular genre immediately that can fit with the liar theme well. We brainstormed a lot of genres and ideas as can be seen in figure 2, we had a lot of games in mind and creative ways to incorporate the lies inside. I then gave suggestion to to rank it based on how hard it is to code and how interesting will the game be, given the time constraint. After we rated them, we decided that the shooter pixel game being the most interesting and less complicated to create within the time constraint. I suggested that for our next step was to list all the things needed in the game as shown in figure 1. The most important things we needed in the game were the character and animation, background, as well as pillars. Other things such as comic style art animation and decorator objects were extras and we originally would do it if we have plenty of time left before the deadline. In figure 3, we sketched the character and roughly how the game would look like</p>
@@ -52,22 +63,39 @@
           <h1>Process</h1>
           <div class="images-container-parent">
             <div class="images-container-child">
-                <img src="images/sdfig1-2.webp" alt="sd figure 4"/>
+              <div class="img-text-container">
+                  <img src="images/sdfig1-2.webp" alt="sd figure 4"/>
+                  <p>Figure 4. Assets in the game</p>
+              </div>
             </div>
             <div class="images-container-child">
-                <img src="images/sdfig2-2.webp" alt="sd figure 5"/>
+              <div class="img-text-container">
+                  <img src="images/sdfig2-2.webp" alt="sd figure 5"/>
+                  <p>Figure 5. Test scene 1 in unity</p>
+              </div>
             </div>
           </div>
           <p>All of the assets and images in the game were created by both of us. I specifically created the envitonment and the objects for the game. In figure 4, since we use pixel art as our primary art style for the game, we decided to go with 2D and hence the use of tilemaps.  I designed the environment and objects by using the software Aseprite, while my teammate created the characters. Because the pre-determined theme is about lying, we reached an agreement to make the enemy shoots instead of the character, therefore the player is required to think for a solution to be able to kill the enemy without getting shot themselves</p>
           <div class="images-container-parent">
             <div class="images-container-child">
-                <img src="images/sdfig1-3.webp" alt="sd figure 6"/>
+              <div class="img-text-container">
+                  <img src="images/sdfig1-3.webp" alt="sd figure 6"/>
+                  <p>Figure 6. Final look of the game</p>
+              </div>
             </div>
             <div class="images-container-child">
-                <img src="images/sdfig2-3.webp" alt="sd figure 7"/>
+              <div class="img-text-container">
+                  <img src="images/sdfig1-3.webp" alt="sd figure 6"/>
+                  <p>Figure 7. Shoot animation</p>
+              </div>
             </div>
+          </div>
+          <div class="images-container-parent">
             <div class="images-container-child">
-                <img src="images/sdfig3-3.webp" alt="sd figure 8"/>
+              <div class="img-text-container">
+                  <img src="images/sdfig3-3.webp" alt="sd figure 8"/>
+                  <p>Figure 8. Death screen</p>
+              </div>
             </div>
           </div>
           <p>As can be seen in figure 6, there is a red line in the middle of the stage, this was implemented to limit the player movement so they cant overlap with the enemy. The pillars in the game are used to control the bullet deflection after it hits them, so that the bullet can hit the enemy without hitting the player, because the bullet will be shot from the enemy's gun instead of the player, as shown in figure 7. We think a normal death animation would be bland so we decided that whenever the player fails to kill the enemy, the death animation will occur and stop the current stage, forcing the player to restart by pressing the X/R button. </p>
@@ -79,7 +107,23 @@
         </div>
 
       </section>
-      <a href="https://niksnk.itch.io/shadow-deflect" class="clickable-button">Click here to go to the game page!</a>
+      <div class="btn">
+        <a href="https://niksnk.itch.io/shadow-deflect" class="clickable-button">Click here to go to the game page!</a>
+      </div>
+      <div class="foot-container">
+        <div class="foot-child">
+          <p><a href="citation.html">Citations</a></p>
+        </div>
+        <div class="foot-child">
+          <p><a href="styleguide.html">Styleguide</a></p>
+        </div>
+        <div class="foot-child">
+          <p><a href="wireframe.html">Wireframe</a></p>
+        </div>
+        <div class="foot-child-right">
+          <p>&#169; 2020 Nikolas Abraham</p>
+        </div>
+      </div>
       </div>
   </body>
 </html>
